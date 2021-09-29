@@ -1,0 +1,50 @@
+Arguments: 
+  /usr/local/Cellar/node/16.9.1/bin/node /usr/local/bin/yarn add nodmon
+
+PATH: 
+  /usr/local/Cellar/gradle/7.1.1/bin:/usr/local/opt/openjdk@8/bin:/usr/local/Cellar/gradle/7.1.1/bin:/usr/local/opt/openjdk@8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/khachornchitsongsaen/Projects/FullStack/koajs-2021/node_modules/.bin:/usr/local/Cellar/gradle/7.1.1/bin:/usr/local/opt/openjdk@8/bin:/Users/khachornchitsongsaen/Library/Android/sdk/emulator:/Users/khachornchitsongsaen/Library/Android/sdk/tools:/Users/khachornchitsongsaen/Library/Android/sdk/tools/bin:/Users/khachornchitsongsaen/Library/Android/sdk/platform-tools:/Users/khachornchitsongsaen/Library/Android/sdk/emulator:/Users/khachornchitsongsaen/Library/Android/sdk/tools:/Users/khachornchitsongsaen/Library/Android/sdk/tools/bin:/Users/khachornchitsongsaen/Library/Android/sdk/platform-tools:/Users/khachornchitsongsaen/Library/Android/sdk/emulator:/Users/khachornchitsongsaen/Library/Android/sdk/tools:/Users/khachornchitsongsaen/Library/Android/sdk/tools/bin:/Users/khachornchitsongsaen/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.9.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/nodmon: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66992:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140763:22)
+      at Request.emit (node:events:394:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141735:10)
+      at Request.emit (node:events:394:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141657:12)
+      at Object.onceWrapper (node:events:513:28)
+      at IncomingMessage.emit (node:events:406:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "koa": "^2.13.3"
+    },
+    "name": "koajs-2021",
+    "version": "1.0.0",
+    "main": "app.js",
+    "devDependencies": {},
+    "scripts": {
+      "start": "nodmon app.js"
+    },
+    "author": "Khachornchit S.",
+    "license": "ISC",
+    "description": ""
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
