@@ -3,8 +3,7 @@ import Koa from 'koa'
 import KoaRouter from 'koa-router'
 import bodyParser from 'koa-bodyparser'
 import '@babel/polyfill'
-import mongo from 'koa-mongo'
-import auth from 'koa-basic-auth'
+const mongoose = require('koa-mongoose')
 
 const port = 3670
 const app = new Koa()
@@ -12,11 +11,10 @@ const router = new KoaRouter()
 
 // Use as middleware
 app.use(bodyParser())
-app.use(mongo({
-    host: 'localhost',
-    port: 27017,
-    db: 'userList'
-}))
+
+// app.use(MongoDB({
+//     uri: 'mongodb://administrator:changeme@127.0.0.1:27017/test'
+// }))
 
 let init = [
     {id: 1, name: "John"},
@@ -25,12 +23,18 @@ let init = [
 
 let data = init
 
-router.get('/', read)
+router.get('/', home)
+router.get('/list', list)
 router.post('/add', add)
 router.put('/update', update)
 router.delete('/reset', reset)
+router.get('/test_mongo', testMongo)
 
-async function read(ctx) {
+async function home(ctx) {
+    ctx.body = `Welcome to Koa`
+}
+
+async function list(ctx) {
     ctx.body = data
 }
 
@@ -56,6 +60,16 @@ async function update(ctx) {
 async function reset(ctx) {
     data = init
     ctx.body = data
+}
+
+async function testMongo(ctx) {
+    // const result = await ctx.db.collection('users').insert({name: 'haha'})
+    // const userId = result.ops[0]._id.toString()
+    // ctx.body = await ctx.db.collection('users').find().toArray()
+    // ctx.db.collection('users').remove({
+    //     _id: mongo.ObjectId(userId)
+    // })
+    ctx.body = 'hello2'
 }
 
 app.use(router.routes()).use(router.allowedMethods())

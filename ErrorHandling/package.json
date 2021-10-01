@@ -1,0 +1,42 @@
+{
+  "name": "error-handling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js"
+  },
+  "keywords": [
+    "koajs"
+  ],
+  "author": "Khachornchit S.",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "koa": "^2.13.3",
+    "koa-404-handler": "^0.0.2",
+    "koa-basic-auth": "^4.0.0",
+    "koa-better-error-handler": "^7.0.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-ejs": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-mongo": "^1.9.3",
+    "koa-mongoose": "^2.0.0",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
